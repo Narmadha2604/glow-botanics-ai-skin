@@ -56,13 +56,14 @@ export const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button 
               variant="outline" 
-              className="relative group hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:shadow-glow"
+              className="relative group hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:shadow-glow bg-gradient-to-r from-primary/5 to-primary-glow/5 hover:from-primary/10 hover:to-primary-glow/10"
             >
-              <ShoppingBag className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-              <span className="font-medium">Cart</span>
-              <span className="absolute -top-2 -right-2 bg-gradient-botanical text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold animate-pulse shadow-glow">
+              <ShoppingBag className="h-5 w-5 mr-2 text-primary group-hover:animate-bounce transition-colors duration-300" />
+              <span className="font-medium text-primary group-hover:text-primary-glow transition-colors duration-300">Cart</span>
+              <span className="absolute -top-3 -right-3 bg-gradient-botanical text-white text-xs rounded-full w-7 h-7 flex items-center justify-center font-bold animate-pulse shadow-glow border-2 border-white group-hover:scale-110 transition-transform duration-300">
                 0
               </span>
+              <div className="absolute inset-0 rounded-md bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </Button>
           </div>
 
