@@ -37,10 +37,10 @@ export const HeroSection = () => {
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 animate-fade-in">
+           {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 animate-slide-up">
             Your Skin.{" "}
-            <span className="bg-gradient-botanical bg-clip-text text-transparent">
+            <span className="bg-gradient-botanical bg-clip-text text-transparent animate-glow">
               Your Ritual.
             </span>
           </h1>
@@ -52,26 +52,26 @@ export const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-scale" style={{ animationDelay: '0.4s' }}>
             <Link to="/quiz">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+              <Button variant="hero" size="lg" className="text-lg px-8 py-6 hover:scale-110 transition-all duration-300 group">
                 Take Skin Quiz
-                <ArrowRight className="h-5 w-5 ml-2" />
+                <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </Link>
             <Link to="/products">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6 hover:scale-105 hover:shadow-glow transition-all duration-300">
                 Shop Now
               </Button>
             </Link>
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center items-center gap-8 mt-12 opacity-70 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <div className="text-sm text-muted-foreground">✨ Dermatologist Tested</div>
-            <div className="text-sm text-muted-foreground">🌿 100% Natural</div>
-            <div className="text-sm text-muted-foreground">🧪 AI Personalized</div>
-            <div className="text-sm text-muted-foreground">💚 Vegan & Cruelty-Free</div>
+          <div className="flex flex-wrap justify-center items-center gap-8 mt-12 opacity-70 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+            <div className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-105 cursor-pointer">✨ Dermatologist Tested</div>
+            <div className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-105 cursor-pointer">🌿 100% Natural</div>
+            <div className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-105 cursor-pointer">🧪 AI Personalized</div>
+            <div className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-105 cursor-pointer">💚 Vegan & Cruelty-Free</div>
           </div>
         </div>
       </div>

@@ -54,9 +54,13 @@ export const Header = () => {
 
           {/* Cart and CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="relative">
-              <ShoppingBag className="h-5 w-5" />
-              <span className="absolute -top-2 -right-2 bg-accent text-accent-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
+            <Button 
+              variant="outline" 
+              className="relative group hover:scale-105 transition-all duration-300 border-primary/30 hover:border-primary hover:shadow-glow"
+            >
+              <ShoppingBag className="h-5 w-5 mr-2 group-hover:animate-bounce" />
+              <span className="font-medium">Cart</span>
+              <span className="absolute -top-2 -right-2 bg-gradient-botanical text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold animate-pulse shadow-glow">
                 0
               </span>
             </Button>

@@ -42,15 +42,15 @@ export const CTAStrip = () => {
           </p>
 
           {/* CTA Button */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="animate-fade-in-scale" style={{ animationDelay: '0.4s' }}>
             <Link to="/quiz">
               <Button 
                 variant="premium" 
                 size="lg" 
-                className="text-xl px-12 py-6 shadow-glow hover:shadow-botanical transition-all duration-300"
+                className="text-xl px-12 py-6 shadow-glow hover:shadow-botanical hover:scale-110 transition-all duration-300 group"
               >
                 Take Your Skin Quiz
-                <ArrowRight className="h-6 w-6 ml-3" />
+                <ArrowRight className="h-6 w-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
               </Button>
             </Link>
           </div>

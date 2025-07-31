@@ -40,14 +40,14 @@ export const FeaturedKits = () => {
   return (
     <section className="py-24 bg-gradient-hero">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6 animate-slide-up">
             Featured{" "}
-            <span className="bg-gradient-botanical bg-clip-text text-transparent">
+            <span className="bg-gradient-botanical bg-clip-text text-transparent animate-glow">
               Skincare Kits
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
             Discover our most popular scientifically-formulated kits, 
             each designed to address specific skin concerns.
           </p>
@@ -57,7 +57,7 @@ export const FeaturedKits = () => {
           {kits.map((kit, index) => (
             <div
               key={kit.id}
-              className="group bg-card border border-border rounded-3xl overflow-hidden hover:shadow-elegant transition-all duration-500 animate-fade-in-scale"
+              className="group bg-card border border-border rounded-3xl overflow-hidden hover:shadow-elegant hover:-translate-y-4 hover:scale-105 transition-all duration-500 animate-fade-in-scale"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Image */}
@@ -109,9 +109,9 @@ export const FeaturedKits = () => {
 
                 {/* CTA */}
                 <Link to={`/products/${kit.id}`}>
-                  <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                  <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 hover:scale-105 group">
                     View Kit
-                    <ArrowRight className="h-4 w-4 ml-2" />
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </Link>
               </div>
@@ -120,10 +120,11 @@ export const FeaturedKits = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div className="text-center animate-fade-in-scale" style={{ animationDelay: '0.8s' }}>
           <Link to="/products">
-            <Button variant="hero" size="lg">
+            <Button variant="hero" size="lg" className="hover:scale-110 transition-all duration-300 group">
               View All Products
+              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
           </Link>
         </div>
